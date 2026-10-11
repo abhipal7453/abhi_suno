@@ -9,6 +9,9 @@
 
 ---
 
-## 🌟 परिचय (Introduction)
-**Abhi Suno** एक प्रीमियम, आधुनिक और 100% ओपन-सोर्स Android म्यूज़िक स्ट्रीमिंग व ऑफलाइन डाउनलोडर ऐप है, जिसे **अभिषेक पाल (Abhishek Pal)** द्वारा डिज़ाइन और विकसित किया गया है।
+## 🌟 Introduction
+**Abhi Suno** एक प्रीमियम, आधुनिक और 100% ओपन-सोर्स Android म्यूज़िक स्ट्रीमिंग व ऑफलाइन डाउनलोडर ऐप है, जिसे **Abhishek pal**
+द्वारा डिज़ाइन और विकसित किया गया है।
+-----
 <p align="center">Made with ❤️ for Music Lovers by <b>Abhishek Pal</b></p>
+
