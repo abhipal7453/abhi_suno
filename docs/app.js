@@ -17,7 +17,7 @@ const DEFAULT_CMS_DATA = {
   // App & General
   appName: "Abhi Suno",
   appNameHindi: "अभी सुनो",
-  version: "v3.9.0 Master Edition",
+  version: "v4.5.1 Master Edition",
   fileSize: "66 MB",
   minAndroid: "Android 7.0+",
   packageName: "com.abhishekpal.abhisuno",
@@ -36,10 +36,10 @@ const DEFAULT_CMS_DATA = {
   heroDownloadsText: "100K+ Downloads",
   
   // Downloads & Links
-  downloadUrl: "https://github.com/palabhishek40629/abhi_suno/releases/download/v3.9.0-30/AbhiSuno-v3.9.0-release.apk",
-  githubReleasesUrl: "https://github.com/palabhishek40629/abhi_suno/releases/latest",
-  githubRepoUrl: "https://github.com/palabhishek40629/abhi_suno",
-  liveWebsiteUrl: "https://palabhishek40629.github.io/abhi_suno/",
+  downloadUrl: "https://github.com/abhipal7453/abhi_suno/releases/latest/download/AbhiSuno-v4.5.1-release.apk",
+  githubReleasesUrl: "https://github.com/abhipal7453/abhi_suno/releases/latest",
+  githubRepoUrl: "https://github.com/abhipal7453/abhi_suno",
+  liveWebsiteUrl: "https://abhipal7453.github.io/abhi_suno/",
   shortUrl: "https://tinyurl.com/abhisuno-apk",
   shortUrlAlias2: "https://tinyurl.com/abhisunoji",
   
@@ -121,14 +121,14 @@ const DEFAULT_CMS_DATA = {
       id: "gal-3",
       title: "Full Poster Art",
       subtitle: "Studio Music Player Artwork",
-      image: "assets/images/startup_poster.png",
+      image: "assets/images/startup_portrait.png",
       isPublic: true
     },
     {
       id: "gal-4",
       title: "App Icon Wide",
       subtitle: "HD Resolution Branding",
-      image: "assets/images/logo_wide.png",
+      image: "assets/images/logo.png",
       isPublic: true
     }
   ],

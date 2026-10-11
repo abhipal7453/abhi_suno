@@ -169,7 +169,7 @@ class PartyRoomService extends ChangeNotifier {
     if (_roomCode == null) return;
     final text = '🎉 Join my Party Room on Abhi Suno! Listen together in real-time on unlimited devices!\n\n'
         '🔑 Room Code: $_roomCode\n\n'
-        '📲 Download Abhi Suno App: https://github.com/palabhishek40629/abhi_suno';
+        '📲 Download Abhi Suno App: https://github.com/abhipal7453/abhi_suno';
     ShareHelper.shareCustomText(
       text: text,
       title: 'Invite to Party Room ($_roomCode)',

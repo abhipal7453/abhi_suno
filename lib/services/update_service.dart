@@ -30,7 +30,7 @@ class UpdateService {
   UpdateService._internal();
 
   static const MethodChannel _channel = MethodChannel('com.abhishekpal.abhisuno/native');
-  static const String _repoOwner = 'palabhishek40629';
+  static const String _repoOwner = 'abhipal7453';
   static const String _repoName = 'abhi_suno';
 
   final Dio _dio = Dio(BaseOptions(
@@ -46,7 +46,7 @@ class UpdateService {
         return version;
       }
     } catch (_) {}
-    return '4.5.0';
+    return '4.5.1+22';
   }
 
 
@@ -84,8 +84,8 @@ class UpdateService {
         }
 
         final rawLatest = tagName.replaceFirst(RegExp(r'^[vV]'), '').trim();
-        final cleanLatest = rawLatest.split('-').first.split('+').first.trim();
-        final hasUpdate = _isNewerVersion(cleanLatest, currentVer);
+        final cleanLatest = rawLatest.trim();
+        final hasUpdate = _isNewerVersion(tagName, currentVer);
 
         return UpdateInfo(
           currentVersion: currentVer,
@@ -148,18 +148,28 @@ class UpdateService {
   bool _isNewerVersion(String latest, String current) {
     if (latest.isEmpty) return false;
     try {
-      final cleanLatest = latest.replaceFirst(RegExp(r'^[vV]'), '').split('-').first.split('+').first.trim();
-      final cleanCurrent = current.replaceFirst(RegExp(r'^[vV]'), '').split('-').first.split('+').first.trim();
-      final lParts = cleanLatest.split('.').map((e) => int.tryParse(e) ?? 0).toList();
-      final cParts = cleanCurrent.split('.').map((e) => int.tryParse(e) ?? 0).toList();
+      final latestStr = latest.replaceFirst(RegExp(r'^[vV]'), '').trim();
+      final currentStr = current.replaceFirst(RegExp(r'^[vV]'), '').trim();
 
-      final maxLen = lParts.length > cParts.length ? lParts.length : cParts.length;
+      final lParts = latestStr.split('+');
+      final cParts = currentStr.split('+');
+
+      final lVer = lParts[0].split('-').first.split('.');
+      final cVer = cParts[0].split('-').first.split('.');
+
+      final maxLen = lVer.length > cVer.length ? lVer.length : cVer.length;
       for (int i = 0; i < maxLen; i++) {
-        final l = i < lParts.length ? lParts[i] : 0;
-        final c = i < cParts.length ? cParts[i] : 0;
+        final l = i < lVer.length ? (int.tryParse(lVer[i]) ?? 0) : 0;
+        final c = i < cVer.length ? (int.tryParse(cVer[i]) ?? 0) : 0;
         if (l > c) return true;
         if (l < c) return false;
       }
+
+      // If version names are identical, check build number
+      final lBuild = lParts.length > 1 ? (int.tryParse(lParts[1]) ?? 0) : 0;
+      final cBuild = cParts.length > 1 ? (int.tryParse(cParts[1]) ?? 0) : 0;
+      if (lBuild > cBuild) return true;
+
     } catch (_) {}
     return false;
   }

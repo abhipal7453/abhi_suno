@@ -100,9 +100,15 @@ class MainActivity: AudioServiceActivity() {
                 "getAppVersion" -> {
                     try {
                         val pInfo = packageManager.getPackageInfo(packageName, 0)
-                        result.success(pInfo.versionName)
+                        val versionString = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                            "${pInfo.versionName}+${pInfo.longVersionCode}"
+                        } else {
+                            @Suppress("DEPRECATION")
+                            "${pInfo.versionName}+${pInfo.versionCode}"
+                        }
+                        result.success(versionString)
                     } catch (e: Exception) {
-                        result.success("4.4.3")
+                        result.success("4.5.1+22")
                     }
 
                 }
