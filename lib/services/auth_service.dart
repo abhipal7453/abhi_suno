@@ -53,7 +53,7 @@ class AuthService extends ChangeNotifier {
       final loggedIn = prefs.getBool(kLoggedInKey) ?? prefs.getBool('user_is_logged_in') ?? false;
       if (loggedIn) {
         final name = prefs.getString(kNameKey) ?? prefs.getString('user_name') ?? 'Abhishek Pal';
-        final email = prefs.getString(kEmailKey) ?? prefs.getString('user_email') ?? 'palabhishek40629@gmail.com';
+        final email = prefs.getString(kEmailKey) ?? prefs.getString('user_email') ?? 'abhipal7453@gmail.com';
         final photo = prefs.getString(kImageKey) ?? prefs.getString('user_photo_url') ?? '';
         final uid = prefs.getString(kUidKey) ?? 'user_${email.hashCode.abs()}';
 
@@ -77,7 +77,7 @@ class AuthService extends ChangeNotifier {
       final prefs = await SharedPreferences.getInstance();
       final email = (customEmail != null && customEmail.trim().isNotEmpty)
           ? customEmail.trim()
-          : (prefs.getString(kEmailKey) ?? prefs.getString('user_email') ?? 'palabhishek40629@gmail.com');
+          : (prefs.getString(kEmailKey) ?? prefs.getString('user_email') ?? 'abhipal7453@gmail.com');
       final name = (customName != null && customName.trim().isNotEmpty)
           ? customName.trim()
           : (prefs.getString(kNameKey) ?? prefs.getString('user_name') ?? 'Abhishek Pal');

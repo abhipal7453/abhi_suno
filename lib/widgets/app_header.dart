@@ -61,7 +61,7 @@ class _AppHeaderState extends State<AppHeader> {
                     ),
                     child: ClipOval(
                       child: Image.asset(
-                        'assets/images/logo_square.png',
+                        'assets/images/logo.png',
                         fit: BoxFit.cover,
                         errorBuilder: (_, __, ___) => Image.asset(
                           'assets/images/logo.png',

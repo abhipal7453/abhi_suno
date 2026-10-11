@@ -22,13 +22,13 @@ class ShareHelper {
               '🔗 JioSaavn लिंक:\n$saavnLink\n\n'
               '🚀 Abhi Suno ऐप में खोलें (Deep Link):\n$deepLink\n\n'
               '✨ बिना किसी विज्ञापन और रुकावट के 320kbps लॉसलेस म्यूज़िक!\n'
-              '📲 Abhi Suno ऐप डाउनलोड करें: https://github.com/palabhishek40629/abhi_suno/releases\n'
+              '📲 Abhi Suno ऐप डाउनलोड करें: https://github.com/abhipal7453/abhi_suno/releases\n'
               'Dev: Abhishek Pal'
           : '🎧 Listen to "$title" by $artist on Abhi Suno!\n\n'
               '🔗 JioSaavn Link:\n$saavnLink\n\n'
               '🚀 Open in Abhi Suno App:\n$deepLink\n\n'
               '✨ 100% Ad-Free 320kbps Lossless Music Streaming & Downloads!\n'
-              '📲 Download Abhi Suno: https://github.com/palabhishek40629/abhi_suno/releases\n'
+              '📲 Download Abhi Suno: https://github.com/abhipal7453/abhi_suno/releases\n'
               'Developer: Abhishek Pal';
 
       await _channel.invokeMethod('shareText', {
@@ -56,11 +56,11 @@ class ShareHelper {
       final text = isHindi
           ? '🎧 Abhi Suno — 100% फ्री और बिना किसी विज्ञापन वाला म्यूज़िक ऐप!\n\n'
               '✨ 320kbps अल्ट्रा HD साउंड, अनलिमिटेड डाउनलोड्स, लिरिक्स और पार्टी रूम!\n'
-              '📲 अभी डाउनलोड करें: https://github.com/palabhishek40629/abhi_suno/releases\n\n'
+              '📲 अभी डाउनलोड करें: https://github.com/abhipal7453/abhi_suno/releases\n\n'
               'निर्माता: Abhishek Pal (Computer Science & Engineering Student)'
           : '🎧 Abhi Suno — 100% Free & Ad-Free Music App!\n\n'
               '✨ 320kbps Ultra HD Sound, Unlimited Downloads, Lyrics & Party Room!\n'
-              '📲 Download now: https://github.com/palabhishek40629/abhi_suno/releases\n\n'
+              '📲 Download now: https://github.com/abhipal7453/abhi_suno/releases\n\n'
               'Developer: Abhishek Pal (Computer Science & Engineering Student)';
 
       await _channel.invokeMethod('shareText', {

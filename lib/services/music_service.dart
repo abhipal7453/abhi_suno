@@ -115,7 +115,7 @@ class MusicService {
           );
           final res = await http.get(
             searchUrl,
-            headers: {'User-Agent': 'AbhiSuno/4.4.2 (palabhishek40629@gmail.com)'},
+            headers: {'User-Agent': 'AbhiSuno/4.4.2 (abhipal7453@gmail.com)'},
           ).timeout(const Duration(milliseconds: 2500));
 
           if (res.statusCode == 200) {
@@ -166,7 +166,7 @@ class MusicService {
         );
         final res = await http.get(
           titleOnlyUrl,
-          headers: {'User-Agent': 'AbhiSuno/4.4.2 (palabhishek40629@gmail.com)'},
+          headers: {'User-Agent': 'AbhiSuno/4.4.2 (abhipal7453@gmail.com)'},
         ).timeout(const Duration(seconds: 2));
 
         if (res.statusCode == 200) {

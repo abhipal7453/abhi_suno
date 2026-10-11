@@ -60,11 +60,7 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
             Image.asset(
               'assets/images/startup_portrait.png',
               fit: BoxFit.cover,
-              errorBuilder: (_, __, ___) => Image.asset(
-                'assets/images/startup_wide.png',
-                fit: BoxFit.cover,
-                errorBuilder: (_, __, ___) => Container(color: const Color(0xFF0B0D14)),
-              ),
+              errorBuilder: (_, __, ___) => Container(color: const Color(0xFF0B0D14)),
             ),
             BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 36, sigmaY: 36),
@@ -81,15 +77,11 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
                     'assets/images/startup_portrait.png',
                     fit: BoxFit.contain, // Complete poster without ANY zoom or cuts!
                     errorBuilder: (_, __, ___) => Image.asset(
-                      'assets/images/startup_wide.png',
+                      AppConstants.startupAsset,
                       fit: BoxFit.contain,
                       errorBuilder: (_, __, ___) => Image.asset(
-                        AppConstants.startupAsset,
+                        AppConstants.logoAsset,
                         fit: BoxFit.contain,
-                        errorBuilder: (_, __, ___) => Image.asset(
-                          AppConstants.logoAsset,
-                          fit: BoxFit.contain,
-                        ),
                       ),
                     ),
                   ),
